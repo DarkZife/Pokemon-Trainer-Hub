@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Your Pokémon journey starts here. Meet the Kanto starters and discover what's coming to Pokémon Trainer Hub: a Pokédex, trading cards, and your personal collection.">
+    <meta name="theme-color" content="#bd202b">
+    <title>Pokémon Trainer Hub | Start Your Journey</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <script type="module" src="/src/scripts/pages/home.js"></script>
 </head>
 <body>
-    
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="site-header" data-page="home"></div>
+    <main id="main">
+        <section class="hero container" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> EVERY TRAINER STARTS SOMEWHERE</p>
+                <h1 id="hero-title">A whole world.<br>A new adventure.<br><em>Your journey.</em></h1>
+                <p class="intro">From your very first partner to your favorite card, make room for a little more Pokémon in your day.</p>
+                <a class="button" href="#starters">Meet your first partner</a>
+                <p class="hero-note">Explore. Discover. Build your collection.</p>
+            </div>
+            <!-- Hero images from PokéAPI -->
+            <div class="hero-art" aria-hidden="true">
+                <div class="hero-orbit" aria-hidden="true"></div>
+                <span class="art-label">THE ORIGINAL ADVENTURE</span>
+                <img class="hero-pokemon bulbasaur" alt="" width="475" height="475" hidden>
+                <img class="hero-pokemon squirtle" alt="" width="475" height="475" hidden>
+                <img class="hero-pokemon charmander" alt="" width="475" height="475" hidden>
+                <span class="region-label">KANTO REGION <span>•</span> GENERATION I</span>
+            </div>
+        </section>
+        <section class="starter-section" id="starters" aria-labelledby="starter-title">
+            <div class="container starter-layout">
+                <div>
+                    <p class="eyebrow">SMALL BEGINNINGS. BIG POSSIBILITIES.</p>
+                    <h2 id="starter-title">Who’s your<br>first partner?</h2>
+                    <p>Three classic starters. Three different paths. Get to know the Pokémon that started it all.</p>
+                    <div class="starter-controls" role="group" aria-label="Choose a starter" hidden>
+                        <button type="button" data-pokemon="bulbasaur" aria-pressed="true">Bulbasaur</button>
+                        <button type="button" data-pokemon="charmander" aria-pressed="false">Charmander</button>
+                        <button type="button" data-pokemon="squirtle" aria-pressed="false">Squirtle</button>
+                    </div>
+                    <p id="starter-status" role="status"></p>
+                    <noscript>
+                        <p>Enable JavaScript to load Pokémon images and explore the starters.</p>
+                    </noscript>
+                </div>
+                <!-- Selected starter and its details -->
+                <article class="partner-card" aria-labelledby="partner-name" aria-live="polite" aria-atomic="true" hidden>
+                    <div class="partner-art">
+                        <span id="partner-number"></span>
+                        <img id="partner-image" alt="" width="475" height="475" hidden>
+                    </div>
+                    <div class="partner-info">
+                        <p class="eyebrow">KANTO STARTER</p>
+                        <h3 id="partner-name"></h3>
+                        <p id="partner-types" class="type-label"></p>
+                        <p id="partner-description"></p>
+                        <dl class="partner-facts">
+                            <div>
+                                <dt>Height</dt>
+                                <dd id="partner-height"></dd>
+                            </div>
+                            <div>
+                                <dt>Weight</dt>
+                                <dd id="partner-weight"></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="container explore-section" id="explore" aria-labelledby="explore-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR NEXT CHAPTER</p>
+                    <h2 id="explore-title">One hub. More ways to explore.</h2>
+                </div>
+                <p>We’re just getting started.<br>Here’s what’s on the way.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-symbol" aria-hidden="true">◎</span>
+                    <span class="status">Coming soon</span>
+                    <h3>Know your Pokémon</h3>
+                    <p>Explore the Pokédex, discover types and abilities, and find your next favorite.</p>
+                    <span class="feature-label">POKÉDEX</span>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-symbol" aria-hidden="true">▤</span>
+                    <span class="status">Coming soon</span>
+                    <h3>Find your next card</h3>
+                    <p>Browse trading cards and take a closer look at the artwork, sets, and details.</p>
+                    <span class="feature-label">TRADING CARDS</span>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-symbol" aria-hidden="true">◇</span>
+                    <span class="status">Coming soon</span>
+                    <h3>Make it your collection</h3>
+                    <p>Save your favorite cards and discover new additions with virtual pack openings.</p>
+                    <span class="feature-label">COLLECTION & PACKS</span>
+                </article>
+            </div>
+        </section>
+    </main>
+    <div id="site-footer"></div>
 </body>
 </html>

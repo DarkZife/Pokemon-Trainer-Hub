@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   appType: "mpa",
 
-  // Include each complete page in the production build.
+  // Pages to include when building the site.
   input: {
     home: resolve(import.meta.dirname, "index.html"),
     pokedex: resolve(import.meta.dirname, "pages/pokedex.html"),

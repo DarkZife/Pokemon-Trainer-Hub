@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Explore Pokémon by region and National Pokédex number."
+    >
+    <meta name="theme-color" content="#bd202b">
+    <title>Pokédex | Pokémon Trainer Hub</title>
+
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/pokedex.css">
+
+    <script type="module" src="/src/scripts/pages/pokedex.js"></script>
+</head>
+<body class="pokedex-layout">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div id="site-header" data-page="pokedex"></div>
+
+    <main id="main" class="pokedex-page">
+        <div class="pokedex-case">
+            <!-- Pokédex lens and lights -->
+            <div class="pokedex-top" aria-hidden="true">
+                <span class="pokedex-lens"></span>
+                <div class="pokedex-lights">
+                    <span class="pokedex-light light-red"></span>
+                    <span class="pokedex-light light-yellow"></span>
+                    <span class="pokedex-light light-green"></span>
+                </div>
+            </div>
+            <div class="pokedex-screen">
+                <header class="pokedex-heading">
+                    <p class="pokedex-label">POKÉMON DATABASE</p>
+                    <h1>Pokédex</h1>
+                    <p>Explore every region. Discover every Pokémon.</p>
+                </header>
+
+                <p id="pokedex-status" role="status"></p>
+
+                <!-- Region sections are added by pokedex.js -->
+                <div id="pokedex-regions"></div>
+
+                <noscript>
+                    <p>Enable JavaScript to load the Pokédex.</p>
+                </noscript>
+            </div>
+        </div>
+    </main>
+    <div id="site-footer"></div>
+</body>
+</html>

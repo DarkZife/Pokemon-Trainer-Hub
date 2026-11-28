@@ -3,15 +3,15 @@ import globals from "globals";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
-  // Skip generated build files and installed dependencies.
+  // Ignore build files and dependencies.
   {
     ignores: ["dist/**", "node_modules/**"],
   },
 
-  // Apply recommended checks to JavaScript files.
+  // Recommended JavaScript checks.
   js.configs.recommended,
 
-  // Website scripts run in the browser.
+  // Browser scripts
   {
     files: ["src/scripts/**/*.js"],
     languageOptions: {
@@ -19,7 +19,7 @@ export default defineConfig([
     },
   },
 
-  // Tool configuration files run in Node.js.
+  // Node configuration files
   {
     files: ["vite.config.js", "eslint.config.js"],
     languageOptions: {
